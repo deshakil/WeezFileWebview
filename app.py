@@ -9,7 +9,7 @@ from datetime import datetime, timedelta, timezone
 
 app = Flask(__name__)
 # Azure Blob Storage credentials
-AZURE_STORAGE_CONNECTION_STRING = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+AZURE_STORAGE_CONNECTION_STRING = os.getenv('AZURE_WEBVIEW_STORAGE_CONNECTION_STRING')
 BLOB_CONTAINER_NAME = 'weez-file-webview'
 
 # Initialize Azure Blob Service Client
