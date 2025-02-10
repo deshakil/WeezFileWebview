@@ -5,6 +5,8 @@ from azure.storage.blob import BlobServiceClient, BlobClient
 from azure.storage.blob import generate_blob_sas, BlobSasPermissions
 from datetime import datetime, timedelta, timezone
 import re
+from urllib.parse import quote
+
 
 
 
