@@ -68,7 +68,7 @@ def generate_sas():
         safe_username = re.sub(r'[^\w@.-]', '', username)  # Allow email characters
         safe_filename = re.sub(r'[^\w.-]', '', filename)
         encoded_username = quote(safe_username, safe='')
-        blob_path = f"{clean_username}/{safe_filename}"
+        blob_path = f"{safe_username}/{safe_filename}"
 
         # Verify blob exists
         blob_client = blob_service_client.get_blob_client(BLOB_CONTAINER_NAME, blob_path)
