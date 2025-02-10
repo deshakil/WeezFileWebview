@@ -67,11 +67,11 @@ def generate_sas():
             return jsonify({'error': 'Username and filename required'}), 400
 
         # Sanitize inputs
-        safe_username = re.sub(r'[^\w@.-]', '', username)  # Allow email characters
-        safe_filename = re.sub(r'[^\w.-]', '', filename)
-        encoded_username = quote(safe_username, safe='')
-        encoded_filename=quote(safe_filename, safe='')
-        blob_path = f"{encoded_username}/{encoded_filename}"
+        #safe_username = re.sub(r'[^\w@.-]', '', username)  # Allow email characters
+        #safe_filename = re.sub(r'[^\w.-]', '', filename)
+        #encoded_username = quote(safe_username, safe='')
+        #encoded_filename=quote(safe_filename, safe='')
+        blob_path = f"{username}/{filename}"
 
         # Verify blob exists
         blob_client = blob_service_client.get_blob_client(BLOB_CONTAINER_NAME, blob_path)
